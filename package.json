@@ -1,0 +1,55 @@
+{
+  "name": "dear-diary",
+  "version": "1.0.0",
+  "description": "Retro helper",
+  "main": "src/index.js",
+  "repository": "git@github.com:caioeverest/dear-diary.git",
+  "author": "Everest <caioeverest.b@gmail.com>",
+  "license": "GNU v3.0",
+  "private": false,
+  "scripts": {
+    "build": "rm -Rf ./dist && babel ./src -d ./dist --source-maps",
+    "build-bundle": "babel-node src/build.js",
+    "dev": "nodemon --watch ./src --exec 'yarn start'",
+    "serve": "babel-node src/index.js --inspect 9229 --source-maps",
+    "start": "babel-node src/index.js"
+  },
+  "eslintConfig": {
+    "extends": "react-app"
+  },
+  "browserslist": {
+    "production": [
+      ">0.2%",
+      "not dead",
+      "not op_mini all"
+    ],
+    "development": [
+      "last 1 chrome version",
+      "last 1 firefox version",
+      "last 1 safari version"
+    ]
+  },
+  "dependencies": {
+    "axios": "^0.21.1",
+    "body-parser": "^1.19.0",
+    "express": "^4.17.1",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "styled-components": "^5.2.1",
+    "winston": "^3.3.3"
+  },
+  "devDependencies": {
+    "@babel/cli": "^7.12.13",
+    "@babel/core": "^7.12.13",
+    "@babel/node": "^7.12.13",
+    "@babel/plugin-proposal-class-properties": "^7.12.13",
+    "@babel/preset-env": "^7.12.13",
+    "@babel/preset-react": "^7.12.13",
+    "@babel/runtime": "^7.12.13",
+    "babel-loader": "^8.2.2",
+    "babel-register": "^6.26.0",
+    "dotenv": "^8.2.0",
+    "nodemon": "^2.0.7",
+    "webpack": "^5.21.2"
+  }
+}
